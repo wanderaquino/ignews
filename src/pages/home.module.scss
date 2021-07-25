@@ -32,9 +32,16 @@
                 font-weight: bold;
             }
         }
+        & > button {
+            margin-top: 1rem;
+        }
+        button {
+            font-weight: bold;
+            background: var(--yellow-500);
+            padding: 1rem 3.5rem;
+            border-radius: 2.5rem;
+            border: none;
+        }
     }
 
-    .girlCoding {
-        height: 400px;
-    }
 }
