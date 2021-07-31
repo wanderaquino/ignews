@@ -2,6 +2,7 @@ import { NextAuthRequest, NextAuthResponse } from "next-auth/internals";
 import { Readable } from "stream";
 import Stripe from "stripe";
 import {stripe} from "../../../services/stripe";
+import {saveSubscription} from "../_lib/manageSubscription"
 
 async function buffer(readable: Readable) {
     const chunks = [];
@@ -41,9 +42,23 @@ export default async function (request: NextAuthRequest, response: NextAuthRespo
         const {type} = event;
 
         if(relevantEvents.has(type)) {
-            console.log("Webhook event:", event);
+            try{
+            switch (type) {
+                case "checkout.session.completed":
+                    const checkoutSession = event.data.object as Stripe.Checkout.Session;
+                    await saveSubscription(
+                        checkoutSession.subscription.toString(),
+                        checkoutSession.customer.toString()
+                    );
+                    
+                    break;
+                default:
+                    throw new Error("Unhandled Event");
+                }
+            } catch (err) {
+                return response.json({error: "Webhook handler Error", description: err})
+            }
         }
-
     }
     console.log("Received Event");
     response.json({message: "Ok!"});
