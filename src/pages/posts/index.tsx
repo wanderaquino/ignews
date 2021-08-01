@@ -25,7 +25,7 @@ export default function Posts ({posts}: Posts) {
                 <div className={styles.post}>
                     {posts.map(post => {
                         return (
-                        <a href="">
+                        <a href="" key={post.slug}>
                             <time>{post.updatedAt}</time>
                             <strong>{post.title}</strong>
                             <p>{post.excerpt}</p>
