@@ -31,11 +31,11 @@
             &:hover {
                 color: var(--white);
             }
-            &:active{
+            &.active{
                 color: var(--white);
                 font-weight: bold;
             }
-            &:active::after{
+            &.active::after{
                 content: "";
                 height: 3px;
                 border-radius: 3px 3px 0 0;
