@@ -3,13 +3,7 @@ import { mocked } from "ts-jest/utils";
 import { useSession } from "next-auth/client";
 import { SignInButton } from ".";
 
-jest.mock("next-auth/client", () => {
-    return {
-        useSession() {
-            return [null, false]
-        }
-    }
-});
+jest.mock("next-auth/client");
 
 
 describe("Signin component", () => {
