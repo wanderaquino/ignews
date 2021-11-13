@@ -31,7 +31,6 @@ describe("ActiveLink component", () => {
             </ActiveLink>
         )
     
-        debug();
         expect(getByText("Home").classList.contains("active")).toBe(true);
     });
 
