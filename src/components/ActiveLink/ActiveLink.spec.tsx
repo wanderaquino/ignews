@@ -21,7 +21,7 @@ describe("ActiveLink component", () => {
             </ActiveLink>
         )
     
-        expect(getByText("Home")).toBeInTheDocument;
+        expect(getByText("Home")).toBeInTheDocument();
     });
     
     it("adds active classname to activeLink", () => {

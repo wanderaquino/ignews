@@ -28,7 +28,7 @@ describe("Header component", () => {
             <Header />
         )
     
-        expect(getByText("Home")).toBeInTheDocument;
-        expect(getByText("Posts")).toBeInTheDocument;
+        expect(getByText("Home")).toBeInTheDocument();
+        expect(getByText("Posts")).toBeInTheDocument();
     });
 })
