@@ -7,7 +7,7 @@ import { GetStaticProps } from "next";
 interface HomeProps {
   product: {
     priceId: string,
-    amount: number
+    amount: string
   }
 }
 
@@ -22,7 +22,7 @@ export default function Home(props: HomeProps) {
         <span><img src="/images/palmas.png"></img> Hey, welcome</span>
         <h1>News About the <span>React</span> world</h1>
         <p>Get access to all the publications <br /> <span>for {props.product.amount} month</span></p>
-        <SubscribeButton priceId={props.product.priceId}/>
+        <SubscribeButton/>
       </section>
       <img className={styles.girlCoding} src="/images/mulher.svg" alt="Girl coding" />
     </main>
