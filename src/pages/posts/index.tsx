@@ -14,7 +14,7 @@ interface PostContent {
     slug: string,
     title: string,
     excerpt: string,
-    updatedAt: Date
+    updatedAt: string
 }
 export default function Posts ({posts}: Posts) {  
     return (
