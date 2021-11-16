@@ -12,7 +12,7 @@ interface PostPreviewProps {
     post: {
         slug: string,
         title: string,
-        updatedAt: Date
+        updatedAt: string
         content: string
     }
 }
