@@ -27,7 +27,7 @@ export default function Home(props: HomeProps) {
         <p>Get access to all the publications <br /> <span>for {props.product.amount} month</span></p>
         <SubscribeButton/>
       </section>
-      <Image className={styles.girlCoding} src={girlCoding} alt="Girl coding" />
+      <Image className={styles.girlCoding} src={girlCoding} alt="Garota programando" />
     </main>
     </>
   )
