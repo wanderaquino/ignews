@@ -1,7 +1,8 @@
 import { SignInButton } from "../SignInButton";
 import styles from "./styles.module.scss";
-
+import Image from "next/image"
 import { ActiveLink } from "../ActiveLink";
+import logo from "/image/logo.svg";
 
 export function Header () {
     
@@ -9,7 +10,9 @@ export function Header () {
     return (
         <header className={styles.headerContainer}>
             <div className={styles.headerContent}>
-                <img src="/images/logo.svg" alt="Logo IgNews"></img>
+                <Image src={logo}  alt="Logo IgNews" />
+
+                {/* <img src="/images/logo.svg" alt="Logo IgNews"></img> */}
                 <nav>
                     <ActiveLink href="/" activeClassName={styles.active}>
                         <a>Home</a>

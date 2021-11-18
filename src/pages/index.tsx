@@ -3,6 +3,9 @@ import {stripe} from "../services/stripe";
 import { SubscribeButton } from "../components/SubscribeButton";
 import styles from "./home.module.scss";
 import { GetStaticProps } from "next";
+import girlCoding from "/images/mulher.svg";
+import Image from "next/image";
+import palmas from "/images/palmas.png";
 
 interface HomeProps {
   product: {
@@ -19,12 +22,12 @@ export default function Home(props: HomeProps) {
     </Head>
     <main className={styles.contentContainer}>
       <section className={styles.hero}>
-        <span><img src="/images/palmas.png"></img> Hey, welcome</span>
+        <span><Image src={palmas} /> Hey, welcome</span>
         <h1>News About the <span>React</span> world</h1>
         <p>Get access to all the publications <br /> <span>for {props.product.amount} month</span></p>
         <SubscribeButton/>
       </section>
-      <img className={styles.girlCoding} src="/images/mulher.svg" alt="Girl coding" />
+      <Image className={styles.girlCoding} src={girlCoding} alt="Girl coding" />
     </main>
     </>
   )
