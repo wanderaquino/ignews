@@ -17,7 +17,7 @@ export function SubscribeButton () {
             router.push("/posts");
             return;
         }
-        const response = await fetch("http://localhost:3000/api/createCheckoutSession", {
+        const response = await fetch(`${process.env.VERCEL_URL}/api/createCheckoutSession`, {
             method: "POST",
         }).then(response => response.json()).catch(response => console.log(response));
 
