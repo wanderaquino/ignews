@@ -3,9 +3,9 @@ import {stripe} from "../services/stripe";
 import { SubscribeButton } from "../components/SubscribeButton";
 import styles from "./home.module.scss";
 import { GetStaticProps } from "next";
-import girlCoding from "/images/mulher.svg";
+import girlCoding from "../../public/images/mulher.svg";
 import Image from "next/image";
-import palmas from "/images/palmas.png";
+import palmas from "../../public/images/palmas.png";
 
 interface HomeProps {
   product: {
