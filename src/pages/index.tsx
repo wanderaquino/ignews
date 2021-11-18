@@ -22,7 +22,7 @@ export default function Home(props: HomeProps) {
     </Head>
     <main className={styles.contentContainer}>
       <section className={styles.hero}>
-        <span><Image src={palmas} /> Hey, welcome</span>
+        <span><Image src={palmas} alt={"Imagem palminhas"}/> Hey, welcome</span>
         <h1>News About the <span>React</span> world</h1>
         <p>Get access to all the publications <br /> <span>for {props.product.amount} month</span></p>
         <SubscribeButton/>
